@@ -38,14 +38,17 @@ call plug#begin('~/.vim/plugged')
  Plug 'scrooloose/nerdtree'
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ "Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
  Plug 'junegunn/fzf.vim'
  Plug 'ryanoasis/vim-devicons'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :Files<CR>
 
 " move split panes to left/bottom/top/right
  nnoremap <A-h> <C-W>H
