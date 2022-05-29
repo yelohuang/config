@@ -63,6 +63,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'vim-airline/vim-airline-themes'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+ Plug 'Yggdroot/indentLine'
 call plug#end()
 
 nnoremap <C-n> :NERDTreeFind<CR>
@@ -134,3 +135,6 @@ nmap <leader>rn <Plug>(coc-rename)
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 lua require('config')
+" Open all fold by default
+autocmd BufReadPost,FileReadPost * normal zR
+highlight Folded ctermbg=red
